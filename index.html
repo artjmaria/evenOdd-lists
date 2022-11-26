@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,18 +14,42 @@
 
 
     <h1>Even Odd Lists</h1>
-    <hr/> 
+    <hr />
 
     <form id="even-odd-form" autocomplete="off" target="_blank">
-      <div> 
-        <label for="word">word</label> 
-        <input type="text" name="word" id="word"  placeholder="what's your word?" onkeyup=""> 
-      </div>
-      <div>
-        <input type="button" value="Even or Odd?" onclick="">
-      </div>
+        <div>
+            <label for="word">word</label>
+            <input type="text" name="word" id="word"  placeholder="what's your word?" onkeyup="updateWord(this)"> 
+        </div>
+        <div>
+            <input type="button" value="Even or Odd?" onclick="">
+        </div>
     </form>
-    
+
+    <section>
+        <h2>Even</h2>
+        <ul></ul>
+    </section>
+    <section>
+        <h2>Odd</h2>
+        <ul></ul>
+    </section>
+    <!-- JAVASCRIPT BELOW THIS -->
+
+    <!-- Temporary storage to keep up with our user's input -->
+
+    <script>
+        let usersWord = ""
+
+        // A function that will update this variable when the user types in
+
+        function updateWord(element) {
+            usersWord = element.value
+
+            console.log(usersWord)
+        }
+    </script>
+
 </body>
 
 </html>
