@@ -15,14 +15,15 @@
 
     <h1>Even Odd Lists</h1>
     <hr />
-
-    <form id="even-odd-form" autocomplete="off" target="_blank">
+    <!-- 
+   ONKEYDOWN EVENT LISTED ON FROM PREVENTS THE PRESS OF ENTER TO SUBMIT FORM -->
+    <form id="even-odd-form" autocomplete="off" target="_blank" onkeydown="return event.key != 'Enter';">
         <div>
             <label for="word">word</label>
             <input type="text" name="word" id="word" placeholder="what's your word?" onkeyup="updateWord(this)">
         </div>
         <div>
-            <input type="button" value="Even or Odd?" onclick="handleSubmit(this)">
+            <input id="submt" type="button" value="Even or Odd?" onclick="handleSubmit()">
         </div>
     </form>
 

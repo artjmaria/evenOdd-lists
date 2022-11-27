@@ -4,6 +4,7 @@
         let oddList = document.getElementById("odd")
         let evenList = document.getElementById("even")
 
+
         // A function that will update this variable when the user types in
 
         function updateWord(element) {
@@ -34,4 +35,9 @@
 
             // To reset the form and clear the userWord variable
             document.getElementById("even-odd-form").reset()
+
+
+
+
+
         }
