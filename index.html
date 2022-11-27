@@ -22,7 +22,7 @@
             <input type="text" name="word" id="word" placeholder="what's your word?" onkeyup="updateWord(this)">
         </div>
         <div>
-            <input type="button" value="Even or Odd?" onclick="">
+            <input type="button" value="Even or Odd?" onclick="handleSubmit(this)">
         </div>
     </form>
 
@@ -37,36 +37,8 @@
         <ul id="odd"></ul>
     </section>
 
+    <script src="./scripts.js"></script>
 
-    <!-- JAVASCRIPT BELOW THIS -->
-
-    <!-- Temporary storage to keep up with our user's input -->
-
-    <script>
-        // Variable to reference
-        let usersWord = ""
-        let oddList = document.getElementById("odd")
-
-        // A function that will update this variable when the user types in
-
-        function updateWord(element) {
-            usersWord = element.value
-
-            console.log(usersWord)
-        }
-
-        // Function that will create a new element (<li>), put the input as its innerText and append it to the Odd List
-
-        function handleSubmit() {
-            let newListItem = document.createElement('LI')
-            newListItem.innerText = usersWord
-
-            oddList.appendChild(newListItem)
-
-            // To reset the form and clear the userWord variable
-            document.getElementById("even-odd-form").reset()
-        }
-    </script>
 
 </body>
 
